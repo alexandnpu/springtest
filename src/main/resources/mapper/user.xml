@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alex.mappers.UserMapper">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <select id="getUser" resultType="com.alex.entity.User" parameterType="int">
+        <!-- 具体的sql -->
+        SELECT id, name, secret_hash, user_hash, is_deleted, updated_at, created_at
+        FROM user
+        WHERE id = #{id}
+    </select>
+</mapper>
