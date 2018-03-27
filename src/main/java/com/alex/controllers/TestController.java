@@ -16,8 +16,12 @@ public class TestController {
     private static final String template = "Hello, version 1.3, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @Autowired
     private UserService userService;
+
+    @Autowired
+    public TestController(UserService userService) {
+        this.userService = userService;
+    }
 
     @RequestMapping(path = "/greeting", method = RequestMethod.GET)
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {

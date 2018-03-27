@@ -31,5 +31,7 @@
     </bean>
 
     <!-- 4.扫描web相关的bean -->
-    <context:component-scan base-package="com.alex.controllers" />
+    <context:component-scan base-package="com.alex.controllers" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
+    </context:component-scan>
 </beans>
