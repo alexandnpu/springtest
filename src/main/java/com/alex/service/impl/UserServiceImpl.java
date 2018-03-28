@@ -4,6 +4,7 @@ import com.alex.entity.User;
 import com.alex.mappers.UserMapper;
 import com.alex.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 
@@ -13,7 +14,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Autowired
-    public UserServiceImpl(UserMapper userMapper) {
+    public UserServiceImpl(@Qualifier(value = "com.alex.mappers.UserMapper") UserMapper userMapper) {
         this.userMapper = userMapper;
     }
 
