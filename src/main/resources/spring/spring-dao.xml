@@ -19,12 +19,9 @@
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
 
-        <!-- c3p0连接池的私有属性 -->
         <property name="maximumPoolSize" value="30"/>
         <property name="minimumIdle" value="5"/>
-        <!-- 关闭连接后不自动commit -->
         <property name="autoCommit" value="false"/>
-        <!-- 获取连接超时时间 -->
         <property name="connectionTimeout" value="10000"/>
     </bean>
 
