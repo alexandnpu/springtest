@@ -13,6 +13,6 @@
 
     <insert id="insertUser" parameterType="com.alex.entity.User" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         INSERT into user (name, secret_hash, user_hash, is_deleted, updated_at, created_at)
-        VALUES (#{name}, #{secretHash}, #{userHash}, #{isDeleted}, #{updatedAt}, #{createdAt})
+        VALUES (#{name}, #{secretHash}, #{#userHash}, #{isDeleted}, #{updatedAt}, #{createdAt})
     </insert>
 </mapper>
