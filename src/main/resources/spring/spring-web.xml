@@ -35,4 +35,8 @@
                             name-generator="com.alex.utils.PackageBeanNameGenerator">
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
     </context:component-scan>
+
+    <mvc:interceptors>
+        <bean id="logInterceptor" class="com.alex.misc.LogInterceptor"/>
+    </mvc:interceptors>
 </beans>
